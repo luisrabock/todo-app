@@ -5,10 +5,10 @@ export default (state = INITIAL_STATE, action) => {
         case 'DESCRIPTION_CHANGE':
             return {...state, description: action.payload}
         case 'TODO_SEARCHED':
-            return {...state, list: action.payload.data}
+            return {...state, list: action.payload}
         default:
             return state
-        case 'TODO_ADDED':
+        case 'TODO_CLEAR':
             return {...state, description: ''}
     }
 }
